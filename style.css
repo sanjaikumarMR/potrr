@@ -1,0 +1,207 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: url('WhatsApp\ Image\ 2024-06-16\ at\ 22.51.22_10551a2e.jpg') no-repeat center center fixed; /* Add your background image URL here */
+    background-size: cover;
+    color: #fff; /* Adjust the text color for better contrast against the background */
+}
+/* Header and navigation */
+header {
+    background: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Burger menu */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+}
+/* Section styling */
+section {
+    padding: 80px 20px 20px; /* Adjust padding to account for fixed header */
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    background: rgba(244, 244, 244, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
+    width: calc(50% - 20px);
+    color: #333; /* Adjust text color for readability */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for floating effect */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* To ensure content respects border radius */
+    position: relative; /* Ensure child elements are positioned relative to this */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+.project:hover {
+    transform: translateY(-10px); /* Move up by 10px */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+.project-description {
+    display: none; /* Hide description by default */
+    margin-top: 10px; /* Optional: Add space between title and description */
+}
+
+.project.active .project-description {
+    display: block; /* Show description when active */
+    margin-top: 10px; /* Optional: Add space between title and description */
+}
+.intro-container {
+    background-color: rgba(244, 244, 244, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border */
+    border-radius: 15px; /* Rounded corners */
+    color: #333; /* Adjust text color for readability */
+    margin-bottom: 20px;
+    max-width:900px; /* Optional: limit the width */
+    margin: 0 auto; /* Center the container */
+    transition: transform 0.5s ease; /* Smooth transition for transform */
+}
+.intro-container p {
+    font-family: "Times New Roman", Times, serif; /* Specify Times New Roman or a serif font */
+    font-size: 18px; /* Adjust font size as needed */
+    font-style: italic; /* Make paragraph text italic */
+    line-height: 1.6; /* Adjust line height for readability */
+}
+.intro-container:hover {
+    transform: scale(1.1); /* Scale down to 95% of original size */
+}
+.profile-photo-container {
+    width:200px; /* Adjust the width as needed */
+    height:200px; /* Adjust the height as needed */
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Ensure content respects border radius */
+    margin: 0 auto 20px; /* Center the container and add spacing */
+    border: 2px solid #fff; /* Optional: Add a border for better contrast */
+}
+.profile-photo {
+    width: 100%; /* Ensure the image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+.details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.detail-item {
+    background: rgba(51, 51, 51, 0.9); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.detail-item:hover {
+    background: rgba(70, 70, 70, 0.9);
+    transform: scale(1.05); /* Zoom in effect */
+}
+
+.detail-answer {
+    display: none;
+    margin-top: 10px;
+}
+
+.detail-item:hover .detail-answer {
+    display: block;
+}
+footer {
+    text-align: center;
+    padding: 6px;
+    background: rgba(51, 51, 51, 0.9);
+    width: 100%;
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+.linkedin-link {
+    color: #0e76a8; /* LinkedIn blue color */
+    text-decoration: none;
+}
+
+.linkedin-link:hover {
+    color: #005582; /* Darker blue on hover */
+}
